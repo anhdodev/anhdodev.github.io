@@ -1,0 +1,376 @@
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    color: white;
+}
+
+
+/*Modal Rule Page */
+.modal-title {
+    color: hsl(229, 25%, 31%);
+    font-size: 25px;
+    padding-bottom: 30px;
+}
+
+.modal-dialog {
+    justify-content: center;
+}
+
+.modal-content {
+    width: auto;
+}
+
+/*Scoreboard*/
+.scoreboard {
+    margin: 40px auto;
+    border: 3px solid hsl(217, 16%, 45%);
+    border-radius: 25px;
+    padding: 1.5%;
+    width: 60vw;
+    height: auto;
+}
+
+.header-left img {
+    max-width: 100%;
+    padding: 15px 0;
+    height: auto;
+}
+
+.scorebanner {
+    margin: 8px 0;
+    position: relative;
+    border: 1px solid white;
+    border-radius: 10px;
+    background: white;
+    width: 14vw;
+    line-height: 3rem;
+    float: right;
+}
+
+#scoretext {
+    color: hsl(229, 64%, 46%);
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#score {
+    color: hsl(229, 25%, 31%);
+    text-align: center;
+    font-size: 60px;
+}
+
+
+
+
+/*Rule Button*/
+.rule {
+    float: right;
+}
+
+.rule .btn {
+    color: white;
+    border: 1px solid white;
+    width: 100px;
+    padding: 8px auto;
+    border-radius: 10px;
+    margin-right: 20px;
+
+}
+
+.rule .btn:hover,
+.rule .btn:active:focus {
+    background: none;
+    outline: none !important;
+    box-shadow: none;
+}
+
+
+
+/*Playing Area*/
+.play {
+    position: relative;
+    background: url(images/bg-triangle.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+    width: 300px;
+    height: 300px;
+    margin: 10% auto 5%;
+}
+
+.playBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.playBtn:hover,
+.playBtn:active:focus {
+    background: none;
+    outline: none !important;
+    box-shadow: none;
+}
+
+
+#paper,
+#rock,
+#scissors {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+
+/* Paper */
+#paper::before {
+    content: "";
+    position: absolute;
+    top: 13%;
+    right: 13%;
+    background: white;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+#paper-icon {
+    position: absolute;
+    top: 34%;
+    right: 35%;
+    z-index: 3;
+}
+
+#paper {
+    background: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+
+}
+
+.play #paper {
+    transform: translate(-50%, -50%);
+}
+
+.result #paper {
+    transform: scale(1.2);
+}
+
+
+/* Scissors */
+#scissors::before {
+    content: "";
+    position: absolute;
+    top: 14%;
+    right: 14%;
+    background: white;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+#scissors-icon {
+    position: absolute;
+    top: 34%;
+    right: 34%;
+    z-index: 3;
+}
+
+#scissors {
+    background: radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+}
+
+.play #scissors {
+    transform: translate(140%, -50%);
+}
+
+.result #scissors {
+    transform: scale(1.2);
+}
+
+
+/* Rock */
+#rock::before {
+    content: "";
+    position: absolute;
+    top: 14%;
+    right: 13%;
+    background: white;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+#rock-icon {
+    position: absolute;
+    top: 34%;
+    right: 35%;
+    z-index: 3;
+}
+
+#rock {
+    background: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+    transform: translate(50%, 100%);
+}
+
+.play #rock {
+    transform: translate(50%, 100%);
+}
+
+.result #rock {
+    transform: scale(1.2);
+}
+
+
+.result {
+    display: none;
+    padding-top: 2em;
+}
+
+#playAgain {
+    background: white;
+    color: hsl(229, 25%, 31%);
+    border: none;
+    margin-top: 20px;
+}
+
+
+#playAgain:hover,
+#playAgain:active:focus {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.matchResult {
+    text-align: center;
+    padding-top: 20%;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .scoreboard {
+        width: 90vw;
+        border-radius: 10px;
+        margin: 15px auto;
+    }
+
+    .header-left img {
+        width: 24vw;
+    }
+
+    #scoretext {
+        padding-top: 10px;
+        font-size: 14px;
+    }
+
+    #score {
+        font-size: 3em;
+    }
+
+    .scorebanner {
+        width: 22vw;
+        line-height: 3em;
+        border-radius: 5px;
+    }
+
+    .rule {
+        float: none;
+        margin-top: 4em;
+    }
+
+    .rule .btn {
+        margin: 0 auto;
+    }
+
+    .play {
+        margin: 7em auto;
+        background-position: 50% 90%;
+    }
+
+    .play #paper {
+        transform: scale(0.8) translate(-50%, -50%);
+    }
+
+    .play #rock {
+        transform: scale(0.8) translate(60%, 150%);
+    }
+
+    .play #scissors {
+        transform: scale(0.8) translate(170%, -50%);
+    }
+
+    .result #paper {
+        transform: scale(1.0);
+    }
+
+    .result #rock {
+        transform: scale(1.0);
+    }
+
+    .result #scissors {
+        transform: scale(1.0);
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+    #scoretext {
+        padding-top: 6px;
+        font-size: 10px;
+    }
+
+    #score {
+        font-size: 40px;
+    }
+
+    .scorebanner {
+        width: 24vw;
+        line-height: 1.5em;
+        border-radius: 5px;
+    }
+
+    .play {
+        width: 250px;
+        height: 300px;
+    }
+
+    .play #paper {
+        transform: scale(0.8) translate(-50%, 0%);
+    }
+
+    .play #rock {
+        transform: scale(0.8) translate(40%, 150%);
+    }
+
+    .play #scissors {
+        transform: scale(0.8) translate(130%, 0%);
+    }
+
+    .result #paper {
+        transform: scale(0.8);
+    }
+
+    .result #rock {
+        transform: scale(0.8);
+    }
+
+    .result #scissors {
+        transform: scale(0.8);
+    }
+    .matchResult h4{
+    text-align: center;
+    font-size: 16px;
+}
+    #playAgain {
+        margin-top: 40px;
+
+    }
+
+
+}

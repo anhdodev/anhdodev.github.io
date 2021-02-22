@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+
+    <!--Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:600,700&display=swap" rel="stylesheet">
+
+    <title>Rock, Paper, Scissors</title>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="modal fade" id="rule" tabindex="-1" role="dialog" aria-labelledby="rule" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6 col-6">
+                                    <h5 class="modal-title" id="rule">RULES</h5>
+                                </div>
+                                <div class="col-md-6 col-6">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="Close">
+                                        <img aria-hidden="true" src="/rock-paper-scissors/images/icon-close.svg">
+                                    </button>
+                                </div>
+                            </div>
+                            <img src="/rock-paper-scissors/images/image-rules.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="row scoreboard">
+            <div class="col-md-8 col-8 header-left">
+                <img src="images/logo.svg">
+            </div>
+
+            <div class="col-md-4 col-4 header-right">
+                <div class="scorebanner">
+                    <h3 id="scoretext">SCORE</h3>
+                    <p id="score">0</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row ">
+
+        </div>
+
+
+        <div class="play">
+
+            <button class="playBtn" id="paper" value="paper">
+                <img class="img-responsive" id="paper-icon" src="images/icon-paper.svg">
+            </button>
+
+            <button class="playBtn" id="rock" value="rock">
+                <img class="img-responsive" id="rock-icon" src="images/icon-rock.svg">
+            </button>
+
+            <button class="playBtn" id="scissors" value="scissors">
+                <img class="img-responsive" id="scissors-icon" src="images/icon-scissors.svg">
+            </button>
+
+
+
+        </div>
+
+
+
+
+        <!--Result Page-->
+        <div class="result">
+            
+            <div class="row">
+                <div class="col-md-5 col-sm-5 col-5 text-center">
+                    <h4>YOU PICKED</h4>
+                </div>
+
+                <div class="col-md-5 col-sm-5 col-5 offset-2 text-center">
+                    <h4>THE HOUSE PICKED</h4>
+                </div>
+            </div>
+            <div class="row result-header">
+                <div class="col-md-5 col-sm-5 col-5 d-flex align-items-center justify-content-center">
+                    
+                    <div class="yourPick"></div>
+                </div>
+                <div class="col-md-2 col-sm-2 col-2 matchResult">
+                    <h4 class="outcome"></h4>
+                    
+                </div>
+                <div class="col-md-5 col-sm-5 col-5 d-flex align-items-center justify-content-center">
+                    <div class="computerPick"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-12 text-center">
+                <button type="button" class="btn btn-primary" id="playAgain">Play Again</button>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="row rule">
+            <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#rule">RULES</button>
+
+        </div>
+
+
+    </div>
+
+
+
+
+</body></html>
