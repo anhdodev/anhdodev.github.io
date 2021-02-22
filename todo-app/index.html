@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Frontend Mentor | Todo app</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="main-container">
+            <div class="row">
+                <div class="col-md-9 col-7">
+                    <h1 id="todo-title">TODO</h1>
+                </div>
+                <div class="col-md-3 col-5">
+                    <a class="btn btn-default btn-light-mode" href="#" role="button"><img id="todo-icon" src="images/icon-sun.svg" alt="todo-icon" /></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 col-12">
+                    <div class="card checkbox-add-form">
+                        <input id="checkbox-title" type="checkbox" value="">
+                        <input class="form todo-add" type="text" placeholder="Create a new todo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-12 col-12">
+                    <div class="card">
+                        <ul class="list-group list-group-flush todo-list" id="sortable">
+                            <li class="list-group-item">
+                                <input id="todo-checkbox" type="checkbox" value=""><label for="todo-checkbox">Empty Bin</label>
+                            </li>
+                            <li class="list-group-item">
+                                <input id="todo-checkbox" type="checkbox" value=""><label for="todo-checkbox">Do Laundry</label>
+                            </li>
+                            <li class="list-group-item">
+                                <input id="todo-checkbox" type="checkbox" value=""><label for="todo-checkbox">Clean Bathroom</label>
+                            </li>
+
+                        </ul>
+
+                        <ul class="list-group list-group-flush todo-tracker">
+
+                            <li class="list-group-item desktop-only">
+                                <div class="todo-status">
+                                    <p><span id="todo-items"></span>items left</p>
+
+                                    <div class="todo-filter">
+                                        <a id="all-todo" class="active" href="#">All</a>
+                                        <a id="active-todo" href="#">Active</a>
+                                        <a id="completed-todo" href="#">Completed</a>
+                                    </div>
+
+                                    <a href="#" id="delete-todo">Clear Completed</a>
+                                </div>
+
+
+                            </li>
+
+                            <li class="list-group-item mobile-only">
+                                <div class="todo-status">
+                                    <div class="todo-filter-mobile">
+                                        <a id="all-todo" class="active" href="#">All</a>
+                                        <a id="active-todo" href="#">Active</a>
+                                        <a id="completed-todo" href="#">Completed</a>
+                                    </div>
+                                </div>
+
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body></html>
