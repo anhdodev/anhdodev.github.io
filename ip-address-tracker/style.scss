@@ -63,6 +63,10 @@ main {
                     border: none;
                     border-top-right-radius: 15px;
                     border-bottom-right-radius: 15px;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
             }
 
@@ -109,6 +113,10 @@ main {
                 span {
                     font-size: 18px;
                     font-weight: 700;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 14px;
+                    }
                 }
 
                 &:not(:last-child) {
@@ -127,6 +135,19 @@ main {
     #ip-map {
         height: 100%;
         z-index: 1;
+        position: relative;
+
+        h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color:lightslategrey;
+
+            @media screen and (max-width: $mobile) {
+                font-size: 15px;
+            }
+        }
     }
 
 

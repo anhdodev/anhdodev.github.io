@@ -56,7 +56,7 @@ main #header #address-tracker form input {
   border-radius: 15px;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 480px) {
   main #header #address-tracker form input {
     width: 250px;
   }
@@ -71,6 +71,10 @@ main #header #address-tracker form button {
   border: none;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+}
+
+main #header #address-tracker form button:hover {
+  cursor: pointer;
 }
 
 main #header #info-display {
@@ -90,7 +94,7 @@ main #header #info-display {
   background-color: white;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 480px) {
   main #header #info-display {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -106,7 +110,7 @@ main #header #info-display > div {
   padding-bottom: 1rem;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 480px) {
   main #header #info-display > div {
     text-align: center;
     padding-bottom: 0.75rem;
@@ -124,11 +128,17 @@ main #header #info-display > div span {
   font-weight: 700;
 }
 
+@media screen and (max-width: 768px) {
+  main #header #info-display > div span {
+    font-size: 14px;
+  }
+}
+
 main #header #info-display > div:not(:last-child) {
   border-right: 1px solid #969696;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 480px) {
   main #header #info-display > div:not(:last-child) {
     border: none;
   }
@@ -137,5 +147,21 @@ main #header #info-display > div:not(:last-child) {
 main #ip-map {
   height: 100%;
   z-index: 1;
+  position: relative;
+}
+
+main #ip-map h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: lightslategrey;
+}
+
+@media screen and (max-width: 480px) {
+  main #ip-map h1 {
+    font-size: 15px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
