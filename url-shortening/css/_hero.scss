@@ -6,13 +6,21 @@
     padding-bottom: 4rem;
     align-items: center;
 
+    @include breakpoint-down("large-tablet") {
+        padding-left: 5rem;
+    }
+
+    @include breakpoint-down("tablet") {
+        padding-left: 2rem;
+    }
+
     @include breakpoint-down("mobile") {
         padding: 2rem 2rem 4rem;
         flex-direction: column-reverse;
     }
 
     .hero-text {
-        flex: 2;
+        flex: 2.5;
 
         @include breakpoint-down("mobile") {
             text-align: center;
@@ -22,6 +30,10 @@
             font-size: 3rem;
             line-height: 3.5rem;
             color: $dark-blue;
+
+            @include breakpoint-down("tablet") {
+                font-size: 2.5rem;
+            }
 
             @include breakpoint-down("mobile") {
                 font-size: 2rem;

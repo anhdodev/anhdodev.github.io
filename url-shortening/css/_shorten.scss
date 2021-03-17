@@ -1,7 +1,11 @@
 .input-container {
     padding: 0 10rem;
 
-    @include breakpoint-down("mobile") {
+    @include breakpoint-down("large-tablet") {
+        padding: 0 5rem;
+    }
+
+    @include breakpoint-down("tablet") {
         padding: 0 2rem;
     }
 
@@ -35,6 +39,14 @@
             padding: .75rem;
             border-radius: 10px;
 
+            @include breakpoint-down("large-tablet") {
+                flex-basis: 80%;
+            }
+
+            @include breakpoint-down("large-tablet") {
+                flex-basis: 75%;
+            }
+
             &:focus {
                 outline: none;
             }
@@ -63,6 +75,14 @@
             padding: .75rem 1rem;
             border-radius: 10px;
             width: 100%;
+
+            @include breakpoint-down("large-tablet") {
+                flex-basis: 15%;
+            }
+
+            @include breakpoint-down("tablet") {
+                flex-basis: 20%;
+            }
 
             &:hover {
                 opacity: .7;

@@ -39,6 +39,13 @@
         padding: 0 10rem 10rem;
         position: relative;
 
+        @include breakpoint-down("large-tablet") {
+            padding: 0 5rem 5rem;
+        }
+        
+        @include breakpoint-down("tablet") {
+            padding: 0 2rem 5rem;
+        }
         @include breakpoint-down("mobile") {
             padding: 0 0 10rem;
         }
@@ -69,6 +76,10 @@
             position: absolute;
             top: 56%;
             left: 15%;
+
+            @include breakpoint-down("large-tablet") {
+                top: 65%;
+            }
 
             @include breakpoint-down("mobile") {
                 width: 150%;
@@ -101,6 +112,20 @@
                 padding: 3.5rem 1rem 2.5rem;
                 border-radius: 5px;
                 position: relative;
+
+                @include breakpoint-down("large-tablet") {
+                    width: 250px;
+                }
+
+                @include breakpoint-down("tablet") {
+                    width: 200px;
+                    height: 300px;
+                }
+
+                @include breakpoint-down("mobile") {
+                    width: 300px;
+                    height: 230px;
+                }
 
                 &:nth-of-type(1) {
                     align-self: flex-start;

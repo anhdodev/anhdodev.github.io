@@ -4,6 +4,14 @@ header {
     align-items: center;
     padding: 1.25rem 10rem;
 
+    @include breakpoint-down("large-tablet") {
+        padding: 1.25rem 5rem;
+    }
+
+    @include breakpoint-down("tablet") {
+        padding: 1.25rem 2rem;
+    }
+
     @include breakpoint-down("mobile") {
         padding: 1.25rem 2rem;
     }
@@ -23,6 +31,7 @@ header {
             text-decoration: none;
             color: $gray-violet;
             font-size: 14px;
+            margin-left: 1rem;
 
             &:hover {
                 color: $dark-violet;
